@@ -1,13 +1,17 @@
 {
-  "name": "express-route",
+  "name": "@darnyelx/expressjs-route-manager",
   "version": "0.1.0",
-  "description": "",
+  "description": "A library that helps you organize and group your ExpressJs route intuitively",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["expressjs","express","router"],
+  "author": "Darnyelx",
+  "homepage": "https://github.com/darnyelx/expressjs-route-manager#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/darnyelx/expressjs-route-manager"
+  },
+  "license": "MIT"
 }

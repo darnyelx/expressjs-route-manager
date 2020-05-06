@@ -1,4 +1,4 @@
-<h2>Express Route Manager</h2>
+<h2>ExpressJs Route Manager</h2>
 <p>
 Writing and managing express routes can be tedious most times.
 </p>
@@ -7,7 +7,7 @@ Writing and managing express routes can be tedious most times.
 <h3>Usage</h3>
 <h4>Initialization</h4>
 <code>const express  = require('express');</code><br>
-<code>const expressRouteManager = require('expressroutemanager')(express,option);
+<code>const expressRouteManager = require('expressjs-route-manager')(express,option);
 </code>
 <br/>
 <h4>Options (object)</h4>
