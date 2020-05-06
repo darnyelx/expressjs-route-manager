@@ -5,7 +5,7 @@ module.exports = (allMiddleware,middlewareBase)=>{
 
     allMiddleware.forEach((middleware)=>{
         if (middleware){
-            let path = `.${Path.join('/',middlewareBase||'./s',middleware)}`;
+            let path = `.${Path.join('/',middlewareBase||'./',middleware)}`;
             let arrayOfInitMiddlewares = require.main.require(path);
             array.push(arrayOfInitMiddlewares())
         }
