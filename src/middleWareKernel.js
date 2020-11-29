@@ -5,9 +5,20 @@ module.exports = (allMiddleware,middlewareBase)=>{
 
     allMiddleware.forEach((middleware)=>{
         if (middleware){
-            let path = `.${Path.join('/',middlewareBase||'./',middleware)}`;
+            let path;
+            if(Array.isArray(middleware)){
+                 path = `.${Path.join('/',middlewareBase||'./',middleware[0])}`;
+            }else{
+                 path = `.${Path.join('/',middlewareBase||'./',middleware)}`;
+            }
+
             let arrayOfInitMiddlewares = require.main.require(path);
-            array.push(arrayOfInitMiddlewares())
+            if(Array.isArray(middleware)){
+               array.push(arrayOfInitMiddlewares.apply(null, middleware[1]));
+
+            }else{
+                array.push(arrayOfInitMiddlewares())
+            }
         }
     });
 
