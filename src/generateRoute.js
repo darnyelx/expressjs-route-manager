@@ -48,10 +48,13 @@ module.exports = (app,url,routeObject,oldMiddlewares=[],opt)=>{
         }
 
     }
+    let midKer = middleWareKernel(middlewares||[],opt.middlewareDirectory);
+    if(midKer.length > 0){
+        app.use('/'+url,midKer);
 
+    }
 
-
-    app[verb||"get"]('/'+url,middleWareKernel(oldMiddlewares.concat(middlewares||[]),opt.middlewareDirectory),(req,res)=>{
+    app[verb||"get"]('/'+url,(req,res)=>{
         requireController(req,res)
     });
 

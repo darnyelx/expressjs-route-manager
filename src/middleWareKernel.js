@@ -2,7 +2,6 @@ const Path = require('path');
 
 module.exports = (allMiddleware,middlewareBase)=>{
     let array = [];
-
     allMiddleware.forEach((middleware)=>{
         if (middleware){
             let path;
