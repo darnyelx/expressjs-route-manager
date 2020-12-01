@@ -1,6 +1,6 @@
 {
   "name": "@darnyelx/expressjs-route-manager",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "description": "A library that helps you organize and group your ExpressJs route intuitively",
   "main": "index.js",
   "scripts": {
